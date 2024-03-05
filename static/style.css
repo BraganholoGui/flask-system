@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-header{
+    width: 100%;
+    background-color:#000 ;
+    color:#fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    width: 50%;
+    background-color:#000 ;
+    color:gray;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a:visited{ color: gray }
+a{
+    color:gray;
+    text-decoration: none;
+}
