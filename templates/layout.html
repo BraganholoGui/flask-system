@@ -7,11 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen" />
 </head>
 <body>
-    <div class="fixed-header">
-        {% include 'header.html' %}
-    </div>
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
+    {% include 'header.html' %}
+    {% block content %}{% endblock %}
+    {% include 'footer.html' %}
 </body>
 </html>
