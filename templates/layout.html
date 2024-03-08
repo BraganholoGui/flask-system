@@ -7,19 +7,10 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen" />
 </head>
 <body>
-    <div class="fixed-header">
-        <div class="menu">
-            <a href="/">Home</a>
-            |
-            <a href="/users">Users</a>
-            |
-            <a href="/contact">Contact</a>
-            |
-            <a href="/about">About</a>
-        </div>
-    </div>
+    {% include 'header.html' %}
     <div class="content">
         {% block content %}{% endblock %}
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
