@@ -3,6 +3,12 @@
 {% block content %}
 <section class="content">
     <h1>HOME</h1>
+    <h1>Dados do COVID-19</h1>
+    <ul>
+        {% for country in ['Countries', 'Countries1'] %}
+            <li>{{ country }}</li>
+        {% endfor %}
+    </ul>
 </section>
 {% endblock %}
 

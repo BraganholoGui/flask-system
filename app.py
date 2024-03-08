@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+from service import service
 
 app = Flask(__name__)
+app.register_blueprint(service)
 
 @app.route('/')
 def index():
