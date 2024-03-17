@@ -16,12 +16,13 @@ def covid():
         headers = {
             'AccessKey': {'YourKeyValueHere'}  # Defina o cabeçalho User-Agent de acordo com sua aplicação
         }
-        response = requests.get('https://services.apistore.dev/apistore/countries/v1', headers=headers)
+        response = requests.get('https://api.thecatapi.com/v1/images/search?limit=20')
 
+        print(response)
         if response.status_code == 200:
             data = response.json()
             print(data)
-            return render_template('index.html', data=data)
+            return render_template('publishments.html', datas=data)
         else:
             print('data')
             return jsonify({'error': 'Failed to fetch data'}), 500
