@@ -6,7 +6,9 @@ service = Blueprint('service', __name__)
 def repositories():
     try:
 
-        response = requests.get('https://api.thecatapi.com/v1/images/search?limit=20')
+        token = 123
+        response = requests.get('https://api.github.com/user/repos', headers={'Authorization': f'token {token}'})
+        
         print(response)
         if response.status_code == 200:
             data = response.json()
