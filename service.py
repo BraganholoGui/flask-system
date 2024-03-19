@@ -1,13 +1,16 @@
 from flask import Flask, Blueprint, jsonify, render_template
 import requests
 service = Blueprint('service', __name__)
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 @service.route('/repositories')
 def repositories():
     try:
 
-        token = 123
-        response = requests.get('https://api.github.com/user/repos', headers={'Authorization': f'token {token}'})
+        token_repositories_gitHub = os.getenv("TOKEN_REPOS_GITHUB")
+        response = requests.get('https://api.github.com/user/repos', headers={'Authorization': f'token {token_repositories_gitHub}'})
         
         print(response)
         if response.status_code == 200:
